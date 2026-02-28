@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Stopwatch Application</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Stopwatch with Lap</title>
     <link rel="stylesheet" href="coloring.css">
 </head>
 <body>
 
-    <div class="stopwatch">
-        <h2>Stopwatch</h2>
-        <div class="time" id="display">00:00:00</div>
+    <div class="stopwatch-container">
+        <h1>⏱ Stopwatch</h1>
 
-        <div class="buttons">
-            <button class="start" onclick="start()">Start</button>
-            <button class="pause" onclick="pause()">Pause</button>
-            <button class="reset" onclick="reset()">Reset</button>
-            <button class="lap" onclick="lap()">Lap</button>
+        <div class="display" id="display">
+            00 : 00 : 00 : 000
         </div>
 
-        <ul id="laps"></ul>
+        <div class="buttons">
+            <button id="startBtn" class="start">Start</button>
+            <button id="pauseBtn" class="pause">Pause</button>
+            <button id="lapBtn" class="lap">Lap</button>
+            <button id="resetBtn" class="reset">Reset</button>
+        </div>
+
+        <div class="laps">
+            <h3>Laps</h3>
+            <ul id="lapsList"></ul>
+        </div>
     </div>
 
     <script src="connection.js"></script>
